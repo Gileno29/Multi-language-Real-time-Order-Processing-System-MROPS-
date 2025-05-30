@@ -1,6 +1,7 @@
 
 import random
 import time
+import json
 # Connect to Kafka broker (Docker container network name)
 
 
