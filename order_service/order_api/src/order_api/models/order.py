@@ -9,11 +9,12 @@ import json
 
 
 class Order:
-    def __init__(self, order_id: int, user_id: int, product: str, amount: float, status: str = "created"):
+    def __init__(self, order_id: int, user_id: int, product: str, price: float, quantity:str, status: str = "created"):
         self.order_id = order_id
         self.user_id = user_id
         self.product = product
-        self.amount = amount
+        self.quantity= quantity
+        self.price = price
         self.status = status
 
     def to_dict(self):
@@ -21,7 +22,7 @@ class Order:
             "order_id": self.order_id,
             "user_id": self.user_id,
             "product": self.product,
-            "amount": self.amount,
+            "amount": self.quantity,
             "status": self.status
         }
 
